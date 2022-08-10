@@ -3,6 +3,7 @@ import pathlib, stat, shutil, urllib.request, subprocess, getpass, time, tempfil
 import secrets, json, re
 import IPython.utils.io
 import ipywidgets
+import os
 import pyngrok.ngrok, pyngrok.conf
 
 # https://salsa.debian.org/apt-team/python-apt
@@ -362,10 +363,12 @@ def _setupVNC():
   my_apt.installDebPackage("turbovnc.deb")
   my_apt.installDebPackage("chrome.deb")
 
-  my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip")
+  my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip", "xrdp", "firefox", "pciutils")
   my_apt.commit()
   my_apt.close()
 
+subprocess.run(["service", "xrdp", "start"])
+  
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
   vnc_sec_conf_p.write_text("""\
 no-remote-connections
