@@ -411,5 +411,9 @@ def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", 
   stat, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, True)
   if stat:
     msg += _setupVNC()
+    
+subprocess.run(['wget', 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'], stdout=subprocess.PIPE)
+subprocess.run(['dpkg', '-i', 'google-chrome-stable_current_amd64.deb'], stdout=subprocess.PIPE)    
 
+    
   print(msg)
