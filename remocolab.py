@@ -276,7 +276,9 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
       print("jp - Japan (Tokyo)")
       print("in - India (Mumbai)")
       ngrok_region = region = "ap"
+      clear_output()
 
+      
   return (True, _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC))
 
 def setupSSHD(ngrok_region = None, check_gpu_available = False, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
@@ -350,6 +352,7 @@ def _setupVNC():
   virtualGL_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/virtualgl_{0}_amd64.deb".format(virtualGL_ver)
   turboVNC_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/turbovnc_{0}_amd64.deb".format(turboVNC_ver)
   chrome_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb".format(chrome_ver)
+  play_url = "https://github.com/firsakamala/actionvnc/releases/download/carvnc/1WsearchYT_pause_car-vnc.ascr"
   
 
 
@@ -357,6 +360,7 @@ def _setupVNC():
   _download(virtualGL_url, "virtualgl.deb")
   _download(turboVNC_url, "turbovnc.deb")
   _download(chrome_url, "chrome.deb")
+  _download(play_url, "play.ascr")
   my_apt = _MyApt()
   my_apt.installDebPackage("libjpeg-turbo.deb")
   my_apt.installDebPackage("virtualgl.deb")
