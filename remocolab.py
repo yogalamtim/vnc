@@ -347,12 +347,13 @@ def _setupVNC():
   virtualGL_ver = "2.6.4"
   turboVNC_ver = "2.2.5"
   chrome_ver = "2.2.5"
+  play_ver = "2.2.5"
 
   libjpeg_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/libjpeg-turbo-official_{0}_amd64.deb".format(libjpeg_ver)
   virtualGL_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/virtualgl_{0}_amd64.deb".format(virtualGL_ver)
   turboVNC_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/turbovnc_{0}_amd64.deb".format(turboVNC_ver)
   chrome_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb".format(chrome_ver)
-  play_url = "https://github.com/firsakamala/actionvnc/releases/download/carvnc/1WsearchYT_pause_car-vnc.ascr"
+  play_url = "https://github.com/firsakamala/actionvnc/releases/download/carvnc/1WsearchYT_pause_car-vnc.ascr".format(play_ver)
   
 
 
