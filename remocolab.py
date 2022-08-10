@@ -276,7 +276,7 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
       print("jp - Japan (Tokyo)")
       print("in - India (Mumbai)")
       ngrok_region = region = "ap"
-      clear_output()
+  
 
       
   return (True, _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC))
