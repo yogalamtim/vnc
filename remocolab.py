@@ -343,7 +343,7 @@ def _setupVNC():
   libjpeg_ver = "2.0.5"
   virtualGL_ver = "2.6.4"
   turboVNC_ver = "2.2.5"
-  crhome_ver = "2.2.5"
+  chrome_ver = "2.2.5"
 
   libjpeg_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/libjpeg-turbo-official_{0}_amd64.deb".format(libjpeg_ver)
   virtualGL_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/virtualgl_{0}_amd64.deb".format(virtualGL_ver)
