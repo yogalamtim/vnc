@@ -412,8 +412,5 @@ def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", 
   if stat:
     msg += _setupVNC()
     
-subprocess.run(['wget', 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'], stdout=subprocess.PIPE)
-subprocess.run(['dpkg', '-i', 'google-chrome-stable_current_amd64.deb'], stdout=subprocess.PIPE)    
-
-    
+   
   print(msg)
