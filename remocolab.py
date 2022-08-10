@@ -261,20 +261,20 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
   ngrok_token = None
 
   if tunnel == "ngrok":
-    print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
-    print("(You need to sign up for ngrok and login,)")
+    #print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
+    #print("(You need to sign up for ngrok and login,)")
     #Set your ngrok Authtoken.
     ngrok_token = "25Ua90UKjkMAHUNZ8snfnsjV3jL_5zaGS2Trg33foLazkcqPW"
 
     if not ngrok_region:
-      print("Select your ngrok region:")
-      print("us - United States (Ohio)")
-      print("eu - Europe (Frankfurt)")
-      print("ap - Asia/Pacific (Singapore)")
-      print("au - Australia (Sydney)")
-      print("sa - South America (Sao Paulo)")
-      print("jp - Japan (Tokyo)")
-      print("in - India (Mumbai)")
+      #print("Select your ngrok region:")
+      #print("us - United States (Ohio)")
+      #print("eu - Europe (Frankfurt)")
+      #print("ap - Asia/Pacific (Singapore)")
+      #print("au - Australia (Sydney)")
+      #print("sa - South America (Sao Paulo)")
+      #print("jp - Japan (Tokyo)")
+      #print("in - India (Mumbai)")
       ngrok_region = region = "ap"
   
 
