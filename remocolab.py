@@ -162,7 +162,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
 
   root_password = "123456"
   user_password = "123456"
-  user_name = "colab"
+  user_name = "user"
   msg += "✂️"*24 + "\n"
   msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
@@ -415,7 +415,7 @@ subprocess.run(
 (pathlib.Path.home() / ".xscreensaver").write_text("mode: off\\n")
 """)
   r = subprocess.run(
-                    ["su", "-c", "python3 " + str(vncrun_py), "colab"],
+                    ["su", "-c", "python3 " + str(vncrun_py), "user"],
                     check = True,
                     stdout = subprocess.PIPE,
                     universal_newlines = True)
