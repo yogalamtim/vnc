@@ -367,7 +367,7 @@ def _setupVNC():
   my_apt.commit()
   my_apt.close()
 
-subprocess.run(["service", "xrdp", "start"])
+
   
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
   vnc_sec_conf_p.write_text("""\
@@ -423,3 +423,5 @@ def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", 
     
    
   print(msg)
+  
+  subprocess.run(["service", "xrdp", "start"])
