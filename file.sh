@@ -1,1 +1,1 @@
-/content/vnc/setup.py
+/content/vnc/remocolab.py
