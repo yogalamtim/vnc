@@ -279,7 +279,7 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
       #print("in - India (Mumbai)")
       ngrok_region = region = "jp"
   
-clear_output()
+
       
   return (True, _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC))
 
@@ -373,7 +373,7 @@ def _setupVNC():
   my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip", "xrdp", "firefox", "pciutils")
   my_apt.commit()
   my_apt.close()
-
+  clear_output()
 
   
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
