@@ -94,14 +94,14 @@ def _get_gpu_name():
   return r.stdout.strip()
 
 #def _check_gpu_available():
-#  gpu_name = _get_gpu_name()
-#  if gpu_name == None:
-#    print("This is not a runtime with GPU")
-#  elif gpu_name == "Tesla K80":
-#    print("Warning! GPU of your assigned virtual machine is Tesla K80.")
-#    print("You might get better GPU by reseting the runtime.")
-#  else:
-#    return True
+  gpu_name = _get_gpu_name()
+  if gpu_name == None:
+    print("This is not a runtime with GPU")
+  elif gpu_name == "Tesla K80":
+    print("Warning! GPU of your assigned virtual machine is Tesla K80.")
+    print("You might get better GPU by reseting the runtime.")
+  else:
+    return True
 
   return IPython.utils.io.ask_yes_no("Do you want to continue? [y/n]")
 
