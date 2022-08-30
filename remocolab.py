@@ -275,7 +275,7 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
       #print("sa - South America (Sao Paulo)")
       #print("jp - Japan (Tokyo)")
       #print("in - India (Mumbai)")
-      ngrok_region = region = "ap"
+      ngrok_region = region = "jp"
   
 
       
