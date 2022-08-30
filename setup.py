@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name = "sipo2.py",
+    name = "sipo.py",
     version = "0.1",
-    py_modules = ['sipo2'],
-    url = "https://github.com/demotomohiro/sipo2",
+    py_modules = ['sipo'],
+    url = "https://github.com/demotomohiro/sipo",
     author = "demotomohiro",
     install_requires = ["pyngrok"]
 )
