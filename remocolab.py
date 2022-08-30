@@ -281,8 +281,8 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
       
   return (True, _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC))
 
-def setupSSHD(ngrok_region = None, check_gpu_available = False, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
-  s, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, False)
+def setupSSHD(ngrok_region = None, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
+  s, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, mount_gdrive_to, mount_gdrive_from, False)
   print(msg)
 
 def _setup_nvidia_gl():
