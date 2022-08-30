@@ -373,7 +373,7 @@ def _setupVNC():
   my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip", "xrdp", "firefox", "pciutils")
   my_apt.commit()
   my_apt.close()
-  clear_output()
+  
 
   
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
