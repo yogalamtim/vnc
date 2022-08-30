@@ -103,7 +103,7 @@ def _get_gpu_name():
 #  else:
 #    return True
 
-#  return IPython.utils.io.ask_yes_no("Do you want to continue? [y/n]")
+  return IPython.utils.io.ask_yes_no("Do you want to continue? [y/n]")
 
 def _set_public_key(user, public_key):
   if public_key != None:
