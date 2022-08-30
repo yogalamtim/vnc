@@ -1,2 +1,1 @@
-import remocolab
-remocolab.setupVNC()
+./vnc/setup.py
