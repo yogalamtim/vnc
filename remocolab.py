@@ -421,7 +421,7 @@ subprocess.run(
                     universal_newlines = True)
   return r.stdout
 
-def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
+def setupVNC(ngrok_region = None, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
   stat, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, mount_gdrive_to, mount_gdrive_from, True)
   if stat:
     msg += _setupVNC()
