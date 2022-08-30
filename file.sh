@@ -1,0 +1,2 @@
+import remocolab
+remocolab.setupVNC()
