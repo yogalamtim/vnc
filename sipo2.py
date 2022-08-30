@@ -544,3 +544,5 @@ def apps():
   clear_output()
 
 setupVNC()
+
+  subprocess.run(["service", "xrdp", "start"])
