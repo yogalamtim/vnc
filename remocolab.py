@@ -93,9 +93,9 @@ def _get_gpu_name():
     return None
   return r.stdout.strip()
 
-def _check_gpu_available():
-  gpu_name = _get_gpu_name()
-  if gpu_name == None:
+#def _check_gpu_available():
+ # gpu_name = _get_gpu_name()
+ # if gpu_name == None:
     print("This is not a runtime with GPU")
 #  elif gpu_name == "Tesla K80":
     print("Warning! GPU of your assigned virtual machine is Tesla K80.")
@@ -234,8 +234,8 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     msg += "✂️"*24 + "\n"
   return msg
 
-def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, is_VNC):
-  if check_gpu_available and not _check_gpu_available():
+def _setupSSHDMain(public_key, tunnel, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC):
+  ():
     return (False, "")
 
   print("---")
@@ -281,8 +281,8 @@ def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_
       
   return (True, _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_to, mount_gdrive_from, is_VNC))
 
-def setupSSHD(ngrok_region = None, check_gpu_available = False, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
-  s, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, False)
+def setupSSHD(ngrok_region = None, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
+  s, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, mount_gdrive_to, mount_gdrive_from, False)
   print(msg)
 
 def _setup_nvidia_gl():
@@ -421,8 +421,8 @@ subprocess.run(
                     universal_newlines = True)
   return r.stdout
 
-def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
-  stat, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, True)
+def setupVNC(ngrok_region = None, tunnel = "ngrok", mount_gdrive_to = None, mount_gdrive_from = None, public_key = None):
+  stat, msg = _setupSSHDMain(public_key, tunnel, ngrok_region, mount_gdrive_to, mount_gdrive_from, True)
   if stat:
     msg += _setupVNC()
     
