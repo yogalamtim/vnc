@@ -1,1 +1,1 @@
-./vnc/setup.py
+/content/vnc/setup.py
