@@ -190,7 +190,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     ssh_tunnel = pyngrok.ngrok.connect(addr = 22, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1 = pyngrok.ngrok.connect(addr = 3389, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1
-    m = re.match("tcp://(.+):(\d+)", ssh_tunnel.public_url)
+    m = re.match("(.+):(\d+)", ssh_tunnel.public_url)
     hostname = m.group(1)
     port = m.group(2)
     ssh_common_options += f" -p {port}"
