@@ -233,7 +233,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     msg += "Command to connect to the ssh server:\n"
     msg += "✂️"*24 + "\n"
     #msg += f"ssh {ssh_common_options} {user_name}@{hostname}\n"
-    #msg += "✂️"*24 + "\n"
+    msg += "✂️"*24 + "\n"
   return msg
 
 def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, is_VNC):
