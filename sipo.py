@@ -375,7 +375,7 @@ def _setupVNC():
   my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip", "xrdp", "firefox", "pciutils")
   my_apt.commit()
   my_apt.close()
-  
+  clear_output()
 
   
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
@@ -392,7 +392,7 @@ no-x11-tcp-connections
   vncrun_py = tempfile.gettempdir() / pathlib.Path("vncrun.py")
   vncrun_py.write_text("""\
 import subprocess, secrets, pathlib
-clear_output()
+
 
 vnc_passwd = secrets.token_urlsafe()[:8]
 vnc_viewonly_passwd = secrets.token_urlsafe()[:8]
