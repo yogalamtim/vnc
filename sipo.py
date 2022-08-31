@@ -349,13 +349,13 @@ def _setup_nvidia_gl():
 def _setupVNC():
   libjpeg_ver = "2.0.5"
   virtualGL_ver = "2.6.4"
-  turboVNC_ver = "2.2.5"
+  #turboVNC_ver = "2.2.5"
   chrome_ver = "2.2.5"
   #play_ver = "2.2.5"
 
   libjpeg_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/libjpeg-turbo-official_{0}_amd64.deb".format(libjpeg_ver)
   virtualGL_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/virtualgl_{0}_amd64.deb".format(virtualGL_ver)
-  turboVNC_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/turbovnc_{0}_amd64.deb".format(turboVNC_ver)
+  #turboVNC_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/turbovnc_{0}_amd64.deb".format(turboVNC_ver)
   chrome_url = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb".format(chrome_ver)
   #play_url = "https://github.com/firsakamala/actionvnc/releases/download/carvnc/1WsearchYT_pause_car-vnc.ascr".format(play_ver)
   
@@ -363,7 +363,7 @@ def _setupVNC():
 
   _download(libjpeg_url, "libjpeg-turbo.deb")
   _download(virtualGL_url, "virtualgl.deb")
-  _download(turboVNC_url, "turbovnc.deb")
+  #_download(turboVNC_url, "turbovnc.deb")
   _download(chrome_url, "chrome.deb")
   #_download(play_url, "play.ascr")
   my_apt = _MyApt()
