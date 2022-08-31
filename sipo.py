@@ -168,7 +168,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
   msg += "✂️"*24 + "\n"
   #msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
-  msg += "✂️"*24 + "\n"
+  #msg += "✂️"*24 + "\n"
   subprocess.run(["useradd", "-s", "/bin/bash", "-m", user_name])
   subprocess.run(["adduser", user_name, "sudo"], check = True)
   subprocess.run(["chpasswd"], input = f"root:{root_password}", universal_newlines = True)
