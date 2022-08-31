@@ -5,6 +5,7 @@ import IPython.utils.io
 import ipywidgets
 import os
 import pyngrok.ngrok, pyngrok.conf
+from IPython.display import clear_output 
 
 
 # https://salsa.debian.org/apt-team/python-apt
@@ -374,7 +375,7 @@ def _setupVNC():
   my_apt.installPkg("xfce4", "xfce4-terminal", "actionaz", "unzip", "xrdp", "firefox", "pciutils")
   my_apt.commit()
   my_apt.close()
-
+  clear_output()
 
   
   vnc_sec_conf_p = pathlib.Path("/etc/turbovncserver-security.conf")
