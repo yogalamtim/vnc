@@ -153,19 +153,19 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     if public_key != None:
       f.write("PasswordAuthentication no\n")
 
-  #msg = ""
+  msg = ""
   #msg += "ECDSA key fingerprint of host:\n"
-  #ret = subprocess.run(
-  #              ["ssh-keygen", "-lvf", "/etc/ssh/ssh_host_ecdsa_key.pub"],
-  #              stdout = subprocess.PIPE,
-  #              check = True,
-  #              universal_newlines = True)
-  #msg += ret.stdout + "\n"
+  ret = subprocess.run(
+                ["ssh-keygen", "-lvf", "/etc/ssh/ssh_host_ecdsa_key.pub"],
+                stdout = subprocess.PIPE,
+                check = True,
+                universal_newlines = True)
+  msg += ret.stdout + "\n"
 
   root_password = "123456"
   user_password = "123456"
   user_name = "user"
-  #msg += "✂️"*24 + "\n"
+  msg += "✂️"*24 + "\n"
   msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
   msg += "✂️"*24 + "\n"
