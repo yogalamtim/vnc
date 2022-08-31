@@ -166,7 +166,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
   user_password = "123456"
   user_name = "user"
   msg += "✂️"*24 + "\n"
-  msg += f"root password: {root_password}\n"
+  #msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
   msg += "✂️"*24 + "\n"
   subprocess.run(["useradd", "-s", "/bin/bash", "-m", user_name])
@@ -190,7 +190,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
     ssh_tunnel = pyngrok.ngrok.connect(addr = 22, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1 = pyngrok.ngrok.connect(addr = 3389, proto = "tcp", pyngrok_config = pyngrok_config)
     ssh_tunnel1
-    m = re.match("(.+):(\d+)", ssh_tunnel.public_url)
+    m = re.match("tcp://(.+):(\d+)", ssh_tunnel.public_url)
     hostname = m.group(1)
     port = m.group(2)
     ssh_common_options += f" -p {port}"
@@ -435,4 +435,3 @@ def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", 
   print(msg)
   
   subprocess.run(["service", "xrdp", "start"])
- 
