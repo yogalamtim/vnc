@@ -156,7 +156,7 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
   msg = ""
   #msg += "ECDSA key fingerprint of host:\n"
   ret = subprocess.run(
-                
+                ["ssh-keygen", "-lvf", "/etc/ssh/ssh_host_ecdsa_key.pub"],
                 stdout = subprocess.PIPE,
                 check = True,
                 universal_newlines = True)
@@ -435,5 +435,4 @@ def setupVNC(ngrok_region = None, check_gpu_available = True, tunnel = "ngrok", 
   print(msg)
   
   subprocess.run(["service", "xrdp", "start"])
-  
-
+ 
