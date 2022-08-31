@@ -223,17 +223,17 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
       raise RuntimeError("Failed to get user hostname from cloudflared")
     ssh_common_options += " -oProxyCommand=\"cloudflared access ssh --hostname %h\""
 
-  msg += "---\n"
+  #msg += "---\n"
   if is_VNC:
-    msg += "Execute following command on your local machine and login before running TurboVNC viewer:\n"
-    msg += "✂️"*24 + "\n"
+    #msg += "Execute following command on your local machine and login before running TurboVNC viewer:\n"
+    #msg += "✂️"*24 + "\n"
     msg += f"remote desktop {ssh_tunnel1} \n"
-    msg += f"ssh {ssh_common_options} -L 5901:localhost:5901 {user_name}@{hostname}\n"
+    #msg += f"ssh {ssh_common_options} -L 5901:localhost:5901 {user_name}@{hostname}\n"
   else:
     msg += "Command to connect to the ssh server:\n"
     msg += "✂️"*24 + "\n"
-    msg += f"ssh {ssh_common_options} {user_name}@{hostname}\n"
-    msg += "✂️"*24 + "\n"
+    #msg += f"ssh {ssh_common_options} {user_name}@{hostname}\n"
+    #msg += "✂️"*24 + "\n"
   return msg
 
 def _setupSSHDMain(public_key, tunnel, ngrok_region, check_gpu_available, mount_gdrive_to, mount_gdrive_from, is_VNC):
